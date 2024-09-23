@@ -17,12 +17,10 @@ function deleteLast() {
 
 function calculateResult() {
     try {
-        // Calcula a expressão usando a função eval, mas garante que apenas números e operadores são permitidos
         const result = eval(displayValue);
         displayValue = result.toString();
         document.getElementById('display').value = displayValue;
     } catch (error) {
-        // Em caso de erro (exemplo: expressão inválida), exibe "Erro"
         document.getElementById('display').value = 'Erro';
         displayValue = '';
     }
